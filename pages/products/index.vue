@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <h2>This is Products page</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi dignissimos velit ipsam, eveniet
-      eum odio quam dicta cupiditate architecto quaerat sint veritatis incidunt minima laboriosam nulla
-      illum in sequi? Minus?
-    </p>
+  <div class="grid grid-cols-4 gap-5">
+    <div v-for="product in products">
+      <!-- binding product ke komponen ProductCard,
+      karena pada ProductCard telah terdefinisi props product -->
+      <ProductCard :product="product"/>
+    </div>
   </div>
 </template>
 
@@ -14,6 +14,9 @@
   definePageMeta({
     layout: 'products'
   })
+
+  // fetch data menggunakan composable useFetch()
+  const { data: products } = await useFetch('https://fakestoreapi.com/products')
 </script>
 
 <style scoped>
