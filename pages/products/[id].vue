@@ -17,7 +17,7 @@
           <p class="mb-7">{{ product.description }}</p>
           <button class="btn-primary flex">
             <i class="material-icons mr-2">add_shopping_cart</i>
-            <span>Add to card</span>
+            <span>Add to cart</span>
           </button>
         </div>
       </div>
@@ -31,9 +31,8 @@
   })
 
   const { id } = useRoute().params
-  const url = 'https://fakestoreapi.com/products/' + id
 
-  const { data: product } = await useFetch(url, { key: id })
+  const { data: product } = await useFetch(`/api/products/${id}`)
 
   if (!product.value) {
     throw createError({ statusCode: 404, message: 'Product not found', fatal: true })

@@ -16,7 +16,7 @@
   })
 
   // fetch data menggunakan composable useFetch()
-  const { data: products } = await useFetch('https://fakestoreapi.com/products')
+  const { data: products } = await useFetch('/api/products')
 
    // override head object di nuxt.config menggunakan composable useHead()
    useHead({
