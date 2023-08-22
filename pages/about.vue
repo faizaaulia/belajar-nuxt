@@ -5,11 +5,12 @@
       eum odio quam dicta cupiditate architecto quaerat sint veritatis incidunt minima laboriosam nulla
       illum in sequi? Minus?
     </p>
+    {{ data }}
   </div>
 </template>
 
 <script setup>
-
+  const { data } = await useFetch('/api/tes?name=faiz')
 </script>
 
 <style scoped>
