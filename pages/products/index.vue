@@ -9,7 +9,11 @@
 </template>
 
 <script setup>
-
+  // secara default, layout akan menggunakan template dengan filename default.vue pada direktori layouts
+  // fungsi ini bertujuan untuk menggunakan template selain default
+  definePageMeta({
+    layout: 'products'
+  })
 </script>
 
 <style scoped>
