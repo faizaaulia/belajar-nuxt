@@ -10,7 +10,12 @@
 </template>
 
 <script setup>
-  const { data } = await useFetch('/api/tes?name=faiz')
+  const { data } = await useFetch('/api/tes?name=faiz', {
+    method: 'post',
+    body: {
+      age: 23
+    }
+  })
 </script>
 
 <style scoped>
