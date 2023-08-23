@@ -61,3 +61,7 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+Screenshot:
+![image](https://github.com/faizaaulia/belajar-nuxt/assets/21327758/3633383d-afd7-49ee-baa5-9284fb4cc064)
+![image](https://github.com/faizaaulia/belajar-nuxt/assets/21327758/f4247a1f-f72c-4187-83e8-98619e1d4f82)
